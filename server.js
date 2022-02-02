@@ -5,6 +5,8 @@ const app = express();
 const env = require('./config/env');
 // const setupRoutes = require('./routes/index');
 
+const datasApp = require('./datas/index');
+
 app.use(cors());
 app.use(express.json());
 

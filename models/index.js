@@ -1,5 +1,5 @@
 const Sequelize = require("sequelize");
-const { config } = require("../config/db.config");
+const config = require("../config/db.config");
 
 const ENV = process.env.NODE_ENV;
 
@@ -38,5 +38,10 @@ db.contenu.belongsToMany(db.user, {
   through: "UserContenu",
 });
 
+// DOUBLE LA FOREIGN KEY DE CATEGORIE DANS LA TABLE CONTENU 
+// NECESSAIRE OU JE PEUX ME CONTENTER DU CHAMP CATEGORIE_ID QUI EST DANS LE MODEL ???
+
+// db.categorie.hasMany(db.contenu);
+// db.contenu.belongsTo(db.categorie);
 
 module.exports = db;
