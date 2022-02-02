@@ -2,7 +2,7 @@ const Contenu = (sequelize, DataTypes) => {
   return sequelize.define(
     "contenu",
     {
-      titre: {
+      title: {
         type: DataTypes.STRING(255),
         allowNull: false,
         validate: {
@@ -11,7 +11,7 @@ const Contenu = (sequelize, DataTypes) => {
           },
         },
       },
-      Réalisateur: {
+      director: {
         type: DataTypes.STRING(255),
         allowNull: false,
         validate: {
@@ -20,7 +20,7 @@ const Contenu = (sequelize, DataTypes) => {
           },
         },
       },
-      Année_de_sortie: {
+      release_date: {
         type: DataTypes.INTEGER,
         allowNull: false,
         validate: {
@@ -29,16 +29,16 @@ const Contenu = (sequelize, DataTypes) => {
           },
         },
       },
-      Visibilité: {
+      where_to_watch: {
         type: DataTypes.STRING(255),
         allowNull: true,
       },
       // ajout image
-      Affiche: {
+      poster: {
         type: DataTypes.STRING(255),
         allowNull: true,
       },
-      categorie_id: {
+      category_id: {
         type: DataTypes.INTEGER,
         allowNull: false,
         references: {

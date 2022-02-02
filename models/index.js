@@ -27,7 +27,7 @@ db.Sequelize = Sequelize;
 db.sequelize = sequelize;
 
 db.user = require("./user")(sequelize, Sequelize);
-db.categorie = require("./categorie")(sequelize, Sequelize);
+db.category = require("./category")(sequelize, Sequelize);
 db.contenu = require("./contenu")(sequelize, Sequelize);
 
 db.user.belongsToMany(db.contenu, {

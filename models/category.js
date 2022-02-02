@@ -1,8 +1,8 @@
-const Categorie = (sequelize, DataTypes) => {
+const Category = (sequelize, DataTypes) => {
     return sequelize.define(
-      "categorie",
+      "category",
       {
-        categorie: {
+        category: {
           type: DataTypes.STRING(255),
           allowNull: false,
           validate: {
@@ -28,5 +28,5 @@ const Categorie = (sequelize, DataTypes) => {
     );
   };
   
-  module.exports = Categorie;
+  module.exports = Category;
   
