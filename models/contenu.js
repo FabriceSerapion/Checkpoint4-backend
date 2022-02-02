@@ -41,6 +41,10 @@ const Contenu = (sequelize, DataTypes) => {
       categorie_id: {
         type: DataTypes.INTEGER,
         allowNull: false,
+        references: {
+          model: 'categorie',
+          key: 'id',
+        },
         validate: {
           notNull: {
             msg: "Film ou série mais pas les deux !",
