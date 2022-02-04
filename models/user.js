@@ -9,14 +9,14 @@ const User = (sequelize, DataTypes) => {
         },
         password: {
           type: DataTypes.STRING(255),
-          allowNull: true,
+          allowNull: false,
         },
         lastname: {
-          type: DataTypes.STRING(45),
+          type: DataTypes.STRING(255),
           allowNull: false,
         },
         firstname: {
-          type: DataTypes.STRING(45),
+          type: DataTypes.STRING(255),
           allowNull: false,
         },
         genre: {

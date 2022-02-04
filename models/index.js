@@ -1,5 +1,5 @@
 const Sequelize = require("sequelize");
-const config = require("../config/db.config");
+const { config } = require("../config/db.config");
 
 const ENV = process.env.NODE_ENV;
 
@@ -29,6 +29,7 @@ db.sequelize = sequelize;
 db.user = require("./user")(sequelize, Sequelize);
 db.category = require("./category")(sequelize, Sequelize);
 db.contenu = require("./contenu")(sequelize, Sequelize);
+db.platform = require("./platform")(sequelize, Sequelize);
 
 db.user.belongsToMany(db.contenu, {
   through: "UserContenu",

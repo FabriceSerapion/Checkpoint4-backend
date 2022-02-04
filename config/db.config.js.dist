@@ -11,6 +11,8 @@ const config = {
       acquire: 30000,
       idle: 10000,
     },
+    DB_MAIL: YOUR_MAIL,
+    DB_PASSWORD_MAIL: YOUR_PASSWORD,
   },
 }
 
