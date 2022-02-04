@@ -7,14 +7,14 @@ const Category = (sequelize, DataTypes) => {
           allowNull: false,
           validate: {
             notNull: {
-              msg: "Quelle catégorie de contenu souhaitez vous ajoutez ?",
+              msg: "Quelle catégorie de contenu souhaitez vous ajouter ?",
             },
           },
         },
       },
       {
         sequelize,
-        tableName: "categorie",
+        tableName: "category",
         timestamps: false,
         indexes: [
           {

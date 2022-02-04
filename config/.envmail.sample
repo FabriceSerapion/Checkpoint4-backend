@@ -1,0 +1,6 @@
+const configmail = {
+  DB_MAIL: YOUR_DB_MAIL,
+  DB_PASSWORD_MAIL: YOUR_DB_PASSWORD_MAIL,
+};
+
+module.exports = { configmail };

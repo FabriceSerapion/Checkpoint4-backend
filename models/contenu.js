@@ -20,7 +20,7 @@ const Contenu = (sequelize, DataTypes) => {
           },
         },
       },
-      release_date: {
+      releaseDate: {
         type: DataTypes.INTEGER,
         allowNull: false,
         validate: {
@@ -29,9 +29,13 @@ const Contenu = (sequelize, DataTypes) => {
           },
         },
       },
-      where_to_watch: {
-        type: DataTypes.STRING(255),
+      platform_id: {
+        type: DataTypes.INTEGER,
         allowNull: true,
+        references: {
+          model: 'platform',
+          key: 'id',
+        },
       },
       // ajout image
       poster: {
@@ -42,7 +46,7 @@ const Contenu = (sequelize, DataTypes) => {
         type: DataTypes.INTEGER,
         allowNull: false,
         references: {
-          model: 'categorie',
+          model: 'category',
           key: 'id',
         },
         validate: {
